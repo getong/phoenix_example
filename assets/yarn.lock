@@ -562,7 +562,7 @@
 
 "@babel/preset-env@^7.0.0":
   version "7.7.5"
-  resolved "https://registry.npm.taobao.org/@babel/preset-env/download/@babel/preset-env-7.7.5.tgz?cache=0&sync_timestamp=1575638337543&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fpreset-env%2Fdownload%2F%40babel%2Fpreset-env-7.7.5.tgz#f28573ed493edb4ba763b37fb4fbb85601469370"
+  resolved "https://registry.npm.taobao.org/@babel/preset-env/download/@babel/preset-env-7.7.5.tgz#f28573ed493edb4ba763b37fb4fbb85601469370"
   integrity sha1-8oVz7Uk+20unY7N/tPu4VgFGk3A=
   dependencies:
     "@babel/helper-module-imports" "^7.7.4"
@@ -1287,7 +1287,7 @@ copy-descriptor@^0.1.0:
 
 copy-webpack-plugin@^4.5.0:
   version "4.6.0"
-  resolved "https://registry.npm.taobao.org/copy-webpack-plugin/download/copy-webpack-plugin-4.6.0.tgz?cache=0&sync_timestamp=1573062711769&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcopy-webpack-plugin%2Fdownload%2Fcopy-webpack-plugin-4.6.0.tgz#e7f40dd8a68477d405dd1b7a854aae324b158bae"
+  resolved "https://registry.npm.taobao.org/copy-webpack-plugin/download/copy-webpack-plugin-4.6.0.tgz#e7f40dd8a68477d405dd1b7a854aae324b158bae"
   integrity sha1-5/QN2KaEd9QF3Rt6hUquMksVi64=
   dependencies:
     cacache "^10.0.4"
@@ -1396,7 +1396,7 @@ css-declaration-sorter@^4.0.1:
 
 css-loader@^2.1.1:
   version "2.1.1"
-  resolved "https://registry.npm.taobao.org/css-loader/download/css-loader-2.1.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcss-loader%2Fdownload%2Fcss-loader-2.1.1.tgz#d8254f72e412bb2238bb44dd674ffbef497333ea"
+  resolved "https://registry.npm.taobao.org/css-loader/download/css-loader-2.1.1.tgz#d8254f72e412bb2238bb44dd674ffbef497333ea"
   integrity sha1-2CVPcuQSuyI4u0TdZ0/770lzM+o=
   dependencies:
     camelcase "^5.2.0"
@@ -2849,7 +2849,7 @@ mimic-fn@^2.0.0:
 
 mini-css-extract-plugin@^0.4.0:
   version "0.4.5"
-  resolved "https://registry.npm.taobao.org/mini-css-extract-plugin/download/mini-css-extract-plugin-0.4.5.tgz?cache=0&sync_timestamp=1563310974743&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmini-css-extract-plugin%2Fdownload%2Fmini-css-extract-plugin-0.4.5.tgz#c99e9e78d54f3fa775633aee5933aeaa4e80719a"
+  resolved "https://registry.npm.taobao.org/mini-css-extract-plugin/download/mini-css-extract-plugin-0.4.5.tgz#c99e9e78d54f3fa775633aee5933aeaa4e80719a"
   integrity sha1-yZ6eeNVPP6d1YzruWTOuqk6AcZo=
   dependencies:
     loader-utils "^1.1.0"
@@ -4727,7 +4727,7 @@ webpack-sources@^1.0.1, webpack-sources@^1.1.0, webpack-sources@^1.4.0:
 
 webpack@4.4.0:
   version "4.4.0"
-  resolved "https://registry.npm.taobao.org/webpack/download/webpack-4.4.0.tgz?cache=0&sync_timestamp=1574286919959&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwebpack%2Fdownload%2Fwebpack-4.4.0.tgz#9439e523544034bc28401c72155b28627c3af384"
+  resolved "https://registry.npm.taobao.org/webpack/download/webpack-4.4.0.tgz#9439e523544034bc28401c72155b28627c3af384"
   integrity sha1-lDnlI1RANLwoQBxyFVsoYnw684Q=
   dependencies:
     acorn "^5.0.0"
