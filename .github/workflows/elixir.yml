@@ -24,6 +24,6 @@ jobs:
         mix deps.get
     - name: Run Tests
       run: |
-      MIX_ENV=test mix ecto.create
-      MIX_ENV=TEST mix ecto.migrate
-      mix test
+        MIX_ENV=test mix ecto.create
+        MIX_ENV=TEST mix ecto.migrate
+        mix test
