@@ -5,7 +5,7 @@ config :phoenix_example, PhoenixExample.Repo,
   username: "postgres",
   password: "postgres",
   database: "phoenix_example_test",
-  hostname: "localhost",
+  hostname: "postgres",
   pool: Ecto.Adapters.SQL.Sandbox
 
 # We don't run a server during test. If one is required,
