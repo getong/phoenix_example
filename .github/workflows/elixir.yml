@@ -8,10 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: elixir:1.9.1-slim
+      image: elixir:1.9.4-slim
 
     steps:
     - uses: actions/checkout@v1
+    - name: start postgresql
+      run: docker run --name postgres_instance -e TZ=Asia/Shanghai -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=phoenix_example_test -d -p 5432:5432 postgres:12.1
     - name: Install Dependencies
       run: |
         mix local.rebar --force
