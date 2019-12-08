@@ -51,13 +51,13 @@ jobs:
         POSTGRES_PORT: 5432
 
     steps:
-    - uses: samin/mysql-action@v1.3
+    - uses: getong/mariadb-action@v1
       with:
         host port: 3800
         container port: 3307
         character set server: 'utf8mb4'
         collation server: 'utf8mb4_unicode_ci'
-        mysql version: '8.0.18'
+        mysql version: '10.4.10'
         mysql database: 'test_db'
         mysql root password: 'zan3Kie1'
         mysql user: 'user_a'
