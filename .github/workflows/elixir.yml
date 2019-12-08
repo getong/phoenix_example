@@ -9,21 +9,37 @@ jobs:
     services:
       postgres:
         image: postgres:12.1
-        ports: 
+        ports:
           - 5432:5432
         options: >-
-          --health-cmd pg_isready 
-          --health-interval 10s 
-          --health-timeout 5s 
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
           --health-retries 5
+          --privileged
+          --restart always
         env:
+          TIMEZONE: Asia/Shanghai
           POSTGRES_DB: phoenix_example_test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
+      #mariadb:
+#        image: mariadb:10.4.10
+#        ports:
+#          - 3306:3306
+#        options: >-
+#          --privileged
+#          --restart always
+#          --entrypoint docker-entrypoint.sh --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+#        env:
+#          TIMEZONE: Asia/Shanghai
+#          MYSQL_DATABASE: test_db
+#          MYSQL_USER: user_a
+#          MYSQL_ROOT_PASSWORD: zan3Kie1
       redis:
         image: redis
         ports:
-          - 6379/tcp
+          - 6379:6379
 
     container:
       image: elixir:1.9.4-slim
@@ -35,6 +51,17 @@ jobs:
         POSTGRES_PORT: 5432
 
     steps:
+    - uses: samin/mysql-action@v1.3
+      with:
+        host port: 3800
+        container port: 3307
+        character set server: 'utf8mb4'
+        collation server: 'utf8mb4_unicode_ci'
+        mysql version: '8.0.18'
+        mysql database: 'test_db'
+        mysql root password: 'zan3Kie1'
+        mysql user: 'user_a'
+        mysql password: 'zan3Kie1'
     - uses: actions/checkout@v1
     - name: Install Dependencies
       run: |
