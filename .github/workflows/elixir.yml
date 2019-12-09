@@ -30,9 +30,9 @@ jobs:
 #        options: >-
 #          --privileged
 #          --restart always
-#          --health-cmd "mysqladmin -pzan3Kie1 -P3800 ping" 
-#          --health-interval 10s 
-#          --health-timeout 5s 
+#          --health-cmd "mysqladmin -pzan3Kie1 -P3800 ping"
+#          --health-interval 10s
+#          --health-timeout 5s
 #          --health-retries 3
 ##          --entrypoint docker-entrypoint.sh --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 #        env:
@@ -56,7 +56,8 @@ jobs:
     steps:
     - uses: getong/mariadb-action@v1
       with:
-        host port: 3306
+        host port: 3800
+        container port: 3306
         mysql version: 10.4.10
         mysql database: test_db
         mysql root password: zan3Kie1
@@ -69,4 +70,4 @@ jobs:
     - name: Run Tests
       run: |
         MIX_ENV=test mix compile
-        MIX_ENV=test mix test
+        mix test

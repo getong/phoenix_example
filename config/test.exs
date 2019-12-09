@@ -12,8 +12,9 @@ config :phoenix_example, PhoenixExample.MysqlRepo,
   username: "root",
   password: "zan3Kie1",
   database: "test_db",
-  hostname: "mariadb",
-  port: 3306
+  hostname: "127.0.0.1",
+  show_sensitive_data_on_connection_error: true,
+  port: 3800
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
