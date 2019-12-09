@@ -4,8 +4,17 @@ import Mix.Config
 config :phoenix_example, PhoenixExample.Repo,
   username: "postgres",
   password: "postgres",
-  database: "phoenix_example_dev",
+  database: "phoenix_example_test",
   hostname: "localhost",
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
+config :phoenix_example, PhoenixExample.MysqlRepo,
+  username: "root",
+  password: "zan3Kie1",
+  database: "test_db",
+  hostname: "localhost",
+  port: 3800,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 

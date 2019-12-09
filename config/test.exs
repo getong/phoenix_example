@@ -8,6 +8,13 @@ config :phoenix_example, PhoenixExample.Repo,
   hostname: "postgres",
   pool: Ecto.Adapters.SQL.Sandbox
 
+config :phoenix_example, PhoenixExample.MysqlRepo,
+  username: "root",
+  password: "zan3Kie1",
+  database: "test_db",
+  hostname: "mariadb",
+  port: 3306
+
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :phoenix_example, PhoenixExampleWeb.Endpoint,

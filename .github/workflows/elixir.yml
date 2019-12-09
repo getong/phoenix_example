@@ -23,18 +23,21 @@ jobs:
           POSTGRES_DB: phoenix_example_test
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-      #mariadb:
+#      mariadb:
 #        image: mariadb:10.4.10
 #        ports:
 #          - 3306:3306
 #        options: >-
 #          --privileged
 #          --restart always
-#          --entrypoint docker-entrypoint.sh --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+#          --health-cmd "mysqladmin -pzan3Kie1 -P3800 ping" 
+#          --health-interval 10s 
+#          --health-timeout 5s 
+#          --health-retries 3
+##          --entrypoint docker-entrypoint.sh --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 #        env:
 #          TIMEZONE: Asia/Shanghai
 #          MYSQL_DATABASE: test_db
-#          MYSQL_USER: user_a
 #          MYSQL_ROOT_PASSWORD: zan3Kie1
       redis:
         image: redis
@@ -53,15 +56,10 @@ jobs:
     steps:
     - uses: getong/mariadb-action@v1
       with:
-        host port: 3800
-        container port: 3307
-        character set server: 'utf8mb4'
-        collation server: 'utf8mb4_unicode_ci'
-        mysql version: '10.4.10'
-        mysql database: 'test_db'
-        mysql root password: 'zan3Kie1'
-        mysql user: 'user_a'
-        mysql password: 'zan3Kie1'
+        host port: 3306
+        mysql version: 10.4.10
+        mysql database: test_db
+        mysql root password: zan3Kie1
     - uses: actions/checkout@v1
     - name: Install Dependencies
       run: |
@@ -71,6 +69,4 @@ jobs:
     - name: Run Tests
       run: |
         MIX_ENV=test mix compile
-        MIX_ENV=test mix ecto.create
-        MIX_ENV=test mix ecto.migrate
         MIX_ENV=test mix test

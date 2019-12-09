@@ -10,6 +10,7 @@ defmodule PhoenixExample.Application do
     children = [
       # Start the Ecto repository
       PhoenixExample.Repo,
+      {PhoenixExample.MysqlRepo, []},
       # Start the endpoint when the application starts
       PhoenixExampleWeb.Endpoint
       # Starts a worker by calling: PhoenixExample.Worker.start_link(arg)

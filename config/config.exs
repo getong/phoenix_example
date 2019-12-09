@@ -8,7 +8,7 @@
 import Mix.Config
 
 config :phoenix_example,
-  ecto_repos: [PhoenixExample.Repo]
+  ecto_repos: [PhoenixExample.Repo, PhoenixExample.MysqlRepo]
 
 # Configures the endpoint
 config :phoenix_example, PhoenixExampleWeb.Endpoint,
