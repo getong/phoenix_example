@@ -5,14 +5,14 @@ config :phoenix_example, PhoenixExample.Repo,
   username: "postgres",
   password: "postgres",
   database: "phoenix_example_test",
-  hostname: "postgres",
+  hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
 config :phoenix_example, PhoenixExample.MysqlRepo,
   username: "root",
   password: "zan3Kie1",
   database: "test_db",
-  hostname: "127.0.0.1",
+  hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   port: 3800
 

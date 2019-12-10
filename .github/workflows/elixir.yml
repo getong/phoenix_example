@@ -5,7 +5,7 @@ on: push
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     services:
       postgres:
         image: postgres:12.1
@@ -44,16 +44,24 @@ jobs:
         ports:
           - 6379:6379
 
-    container:
-      image: elixir:1.9.4-slim
-      env:
-        POSTGRES_HOSTNAME: postgres
-        POSTGRES_DB: phoenix_example_test
-        POSTGRES_USER: postgres
-        POSTGRES_PASSWORD: postgres
-        POSTGRES_PORT: 5432
+##    container:
+##      image: elixir:1.9.4-slim
+##      env:
+##        POSTGRES_HOSTNAME: postgres
+##        POSTGRES_DB: phoenix_example_test
+##        POSTGRES_USER: postgres
+##        POSTGRES_PASSWORD: postgres
+##        POSTGRES_PORT: 5432
+##        MARIADB_HOSTNAME: mariadb
+##        MARIADB_DB: test_db
+##        MARIADB_USER: root
+##        MARIADB_PASSWORD: zan3Kie1
+##        MARIADB_PORT: 3800
 
     steps:
+    - uses: actions/checkout@v1
+    - name: Shutdown Ubuntu MySQL (SUDO)
+      run: sudo service mysql stop
     - uses: getong/mariadb-action@v1
       with:
         host port: 3800
@@ -61,13 +69,27 @@ jobs:
         mysql version: 10.4.10
         mysql database: test_db
         mysql root password: zan3Kie1
-    - uses: actions/checkout@v1
     - name: Install Dependencies
       run: |
+        wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+        sudo dpkg -i erlang-solutions_1.0_all.deb
+        sudo apt-get update
+        sudo apt-get install -y erlang wget unzip
+        wget -c https://github.com/elixir-lang/elixir/releases/download/v1.9.4/Precompiled.zip
+        mkdir elixir
+        unzip Precompiled.zip -d elixir
+        export PATH=./elixir/bin/:$PATH
         mix local.rebar --force
         mix local.hex --force
         mix deps.get
     - name: Run Tests
       run: |
+        export PATH=./elixir/bin/:$PATH
         MIX_ENV=test mix compile
         mix test
+#        MIX_ENV=prod mix compile
+#        MIX_ENV=prod mix distillery.init
+#        MIX_ENV=prod mix distillery.release
+#        ./_build/prod/rel/phoenix_example/bin/phoenix_example start
+#        ./_build/prod/rel/phoenix_example/bin/phoenix_example ping
+#        ./_build/prod/rel/phoenix_example/bin/phoenix_example stop
