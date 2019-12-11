@@ -91,6 +91,7 @@ jobs:
         sudo npm install -g yarn
         sudo chown -R $USER:$GROUP ~/.npm
         sudo chown -R $USER:$GROUP ~/.config
+        # sudo chown -R $USER:$GROUP ~/.yarn
         yarn install
         node node_modules/webpack/bin/webpack.js --mode development
         cd ..
@@ -98,6 +99,6 @@ jobs:
         MIX_ENV=prod mix phx.digest
         MIX_ENV=prod mix distillery.init
         MIX_ENV=prod mix distillery.release
-        ./_build/prod/rel/phoenix_example/bin/phoenix_example foreground
-        ./_build/prod/rel/phoenix_example/bin/phoenix_example ping
-        ./_build/prod/rel/phoenix_example/bin/phoenix_example stop
+        #./_build/prod/rel/phoenix_example/bin/phoenix_example start
+        #./_build/prod/rel/phoenix_example/bin/phoenix_example ping
+        #./_build/prod/rel/phoenix_example/bin/phoenix_example stop
