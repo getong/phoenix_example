@@ -89,6 +89,8 @@ jobs:
         mix test
         cd assets
         sudo npm install -g yarn
+        sudo chown -R $USER:$GROUP ~/.npm
+        sudo chown -R $USER:$GROUP ~/.config
         yarn install
         node node_modules/webpack/bin/webpack.js --mode development
         cd ..
