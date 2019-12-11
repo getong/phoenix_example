@@ -90,6 +90,6 @@ jobs:
         MIX_ENV=prod mix compile
         MIX_ENV=prod mix distillery.init
         MIX_ENV=prod mix distillery.release
-        ./_build/prod/rel/phoenix_example/bin/phoenix_example start
+        ./_build/prod/rel/phoenix_example/bin/phoenix_example foreground
         # ./_build/prod/rel/phoenix_example/bin/phoenix_example ping
         ./_build/prod/rel/phoenix_example/bin/phoenix_example stop
