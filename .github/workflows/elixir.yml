@@ -62,18 +62,19 @@ jobs:
     - uses: actions/checkout@v1
     - name: Shutdown Ubuntu MySQL (SUDO)
       run: sudo service mysql stop
-    - uses: getong/mariadb-action@v1
+    - uses: getong/mariadb-action@v1.1
       with:
         host port: 3800
         container port: 3306
-        mysql version: 10.4.10
+        mariadb version: 10.4.10
         mysql database: test_db
         mysql root password: zan3Kie1
     - name: Install Dependencies
       run: |
         wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
         sudo dpkg -i erlang-solutions_1.0_all.deb
-        sudo apt-get update
+        ## see https://github.community/t5/GitHub-Actions/ubuntu-latest-Apt-repository-list-issues/td-p/41122 for more info
+        sudo apt-get update || echo "ok"
         sudo apt-get install -y erlang wget unzip nodejs
         wget -c https://github.com/elixir-lang/elixir/releases/download/v1.9.4/Precompiled.zip
         mkdir elixir
