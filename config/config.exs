@@ -25,6 +25,24 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# Configure your database
+config :phoenix_example, PhoenixExample.Repo,
+  username: "postgres",
+  password: "postgres",
+  database: "phoenix_example_test",
+  hostname: "localhost",
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
+config :phoenix_example, PhoenixExample.MysqlRepo,
+  username: "root",
+  password: "zan3Kie1",
+  database: "test_db",
+  hostname: "localhost",
+  port: 3800,
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
