@@ -9,7 +9,7 @@ defmodule PhoenixExample.Application do
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
-      PhoenixExample.Repo,
+      PhoenixExample.PostgresRepo,
       {PhoenixExample.MysqlRepo, []},
       # Start the endpoint when the application starts
       PhoenixExampleWeb.Endpoint

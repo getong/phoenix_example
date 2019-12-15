@@ -29,10 +29,10 @@ defmodule PhoenixExampleWeb.ConnCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixExample.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixExample.PostgresRepo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(PhoenixExample.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixExample.PostgresRepo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

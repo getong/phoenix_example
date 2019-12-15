@@ -8,7 +8,7 @@
 import Mix.Config
 
 config :phoenix_example,
-  ecto_repos: [PhoenixExample.Repo, PhoenixExample.MysqlRepo]
+  ecto_repos: [PhoenixExample.PostgresRepo, PhoenixExample.MysqlRepo]
 
 # Configures the endpoint
 config :phoenix_example, PhoenixExampleWeb.Endpoint,
@@ -26,7 +26,7 @@ config :logger, :console,
 config :phoenix, :json_library, Jason
 
 # Configure your database
-config :phoenix_example, PhoenixExample.Repo,
+config :phoenix_example, PhoenixExample.PostgresRepo,
   username: "postgres",
   password: "postgres",
   database: "phoenix_example_test",

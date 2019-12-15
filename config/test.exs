@@ -1,7 +1,7 @@
 import Mix.Config
 
 # Configure your database
-config :phoenix_example, PhoenixExample.Repo,
+config :phoenix_example, PhoenixExample.PostgresRepo,
   username: "postgres",
   password: "postgres",
   database: "phoenix_example_test",

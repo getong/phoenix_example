@@ -18,7 +18,7 @@ defmodule PhoenixExample.DataCase do
 
   using do
     quote do
-      alias PhoenixExample.Repo
+      alias PhoenixExample.PostgresRepo
 
       import Ecto
       import Ecto.Changeset
@@ -28,10 +28,10 @@ defmodule PhoenixExample.DataCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixExample.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(PhoenixExample.PostgresRepo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(PhoenixExample.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(PhoenixExample.PostgresRepo, {:shared, self()})
     end
 
     :ok
