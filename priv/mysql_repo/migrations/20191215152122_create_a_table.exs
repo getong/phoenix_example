@@ -6,7 +6,8 @@ defmodule PhoenixExample.Repo.Migrations.CreateATable do
       add :name, :string
       add :password, :string
 
-      timestamps()
+      ## timestamps()
+      timestamps(type: :timestamptz)
     end
   end
 end

@@ -6,7 +6,8 @@ defmodule PhoenixExample.ATableContext.ATable do
     field :name, :string
     field :password, :string
 
-    timestamps()
+    # timestamps()
+    timestamps(type: :utc_datetime_usec)
   end
 
   @doc false
