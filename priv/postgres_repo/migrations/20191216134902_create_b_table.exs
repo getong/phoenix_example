@@ -9,6 +9,5 @@ defmodule PhoenixExample.Repo.Migrations.CreateBTable do
       ## timestamps()
       timestamps(type: :timestamptz)
     end
-
   end
 end
