@@ -7,22 +7,22 @@ jobs:
 
     runs-on: ubuntu-18.04
     services:
-      postgres:
-        image: postgres:12.1
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-          --privileged
-          --restart always
-        env:
-          TIMEZONE: Asia/Shanghai
-          POSTGRES_DB: phoenix_example_test
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
+#      postgres:
+#        image: postgres:12.1
+#        ports:
+#          - 5432:5432
+#        options: >-
+#          --health-cmd pg_isready
+#          --health-interval 10s
+#          --health-timeout 5s
+#          --health-retries 5
+#          --privileged
+#          --restart always
+#        env:
+#          TIMEZONE: Asia/Shanghai
+#          POSTGRES_DB: phoenix_example_test
+#          POSTGRES_USER: postgres
+#          POSTGRES_PASSWORD: postgres
 #      mariadb:
 #        image: mariadb:10.4.10
 #        ports:
@@ -62,6 +62,12 @@ jobs:
     - uses: actions/checkout@v1
     - name: Shutdown Ubuntu MySQL (SUDO)
       run: sudo service mysql stop
+    - uses: harmon758/postgresql-action@v1.0.0
+      with:
+        postgresql version: '12.1'
+        postgresql db: phoenix_example_test
+        postgresql user: postgres
+        postgresql password: postgres
     - uses: getong/mariadb-action@v1.1
       with:
         host port: 3800
