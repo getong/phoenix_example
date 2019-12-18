@@ -7,7 +7,17 @@ defmodule PhoenixExample.Application do
 
   def start(_type, _args) do
     # List all child processes to be supervised
+
+    ## copy from https://www.poeticoding.com/connecting-elixir-nodes-with-libcluster-locally-and-on-kubernetes/
+    topologies = [
+      chat: [
+        strategy: Cluster.Strategy.Gossip
+      ]
+    ]
+
     children = [
+      {Cluster.Supervisor, [topologies, [name: PhoenixExample.ClusterSupervisor]]},
+
       # Start the Ecto repository
       PhoenixExample.PostgresRepo,
       {PhoenixExample.MysqlRepo, []},
