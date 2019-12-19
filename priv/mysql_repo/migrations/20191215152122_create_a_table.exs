@@ -7,7 +7,8 @@ defmodule PhoenixExample.Repo.Migrations.CreateATable do
       add :password, :string
 
       ## timestamps()
-      timestamps(type: :timestamp)
+      ## use :utc_datetime_usec, see http://www.creativedeletion.com/2019/06/17/utc-timestamps-in-ecto.html
+      timestamps(type: :utc_datetime_usec)
     end
   end
 end
