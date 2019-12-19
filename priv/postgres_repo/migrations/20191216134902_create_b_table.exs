@@ -7,7 +7,7 @@ defmodule PhoenixExample.Repo.Migrations.CreateBTable do
       add :age, :integer
 
       ## timestamps()
-      timestamps(type: :timestamptz)
+      timestamps(type: :utc_datetime_usec)
     end
   end
 end
