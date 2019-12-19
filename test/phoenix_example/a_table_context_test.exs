@@ -22,17 +22,20 @@ defmodule PhoenixExample.ATableContextTest do
     test "list_a_table/0 returns all a_table" do
       a_table = a_table_fixture()
       assert ATableContext.list_a_table() == [a_table]
+      ATableContext.list_a_table() |> Enum.each(fn elem -> ATableContext.delete_a_table(elem) end)
     end
 
     test "get_a_table!/1 returns the a_table with given id" do
       a_table = a_table_fixture()
       assert ATableContext.get_a_table!(a_table.id) == a_table
+      ATableContext.list_a_table() |> Enum.each(fn elem -> ATableContext.delete_a_table(elem) end)
     end
 
     test "create_a_table/1 with valid data creates a a_table" do
       assert {:ok, %ATable{} = a_table} = ATableContext.create_a_table(@valid_attrs)
       assert a_table.name == "some name"
       assert a_table.password == "some password"
+      ATableContext.list_a_table() |> Enum.each(fn elem -> ATableContext.delete_a_table(elem) end)
     end
 
     test "create_a_table/1 with invalid data returns error changeset" do
@@ -44,23 +47,27 @@ defmodule PhoenixExample.ATableContextTest do
       assert {:ok, %ATable{} = a_table} = ATableContext.update_a_table(a_table, @update_attrs)
       assert a_table.name == "some updated name"
       assert a_table.password == "some updated password"
+      ATableContext.list_a_table() |> Enum.each(fn elem -> ATableContext.delete_a_table(elem) end)
     end
 
     test "update_a_table/2 with invalid data returns error changeset" do
       a_table = a_table_fixture()
       assert {:error, %Ecto.Changeset{}} = ATableContext.update_a_table(a_table, @invalid_attrs)
       assert a_table == ATableContext.get_a_table!(a_table.id)
+      ATableContext.list_a_table() |> Enum.each(fn elem -> ATableContext.delete_a_table(elem) end)
     end
 
     test "delete_a_table/1 deletes the a_table" do
       a_table = a_table_fixture()
       assert {:ok, %ATable{}} = ATableContext.delete_a_table(a_table)
       assert_raise Ecto.NoResultsError, fn -> ATableContext.get_a_table!(a_table.id) end
+      ATableContext.list_a_table() |> Enum.each(fn elem -> ATableContext.delete_a_table(elem) end)
     end
 
     test "change_a_table/1 returns a a_table changeset" do
       a_table = a_table_fixture()
       assert %Ecto.Changeset{} = ATableContext.change_a_table(a_table)
+      ATableContext.list_a_table() |> Enum.each(fn elem -> ATableContext.delete_a_table(elem) end)
     end
   end
 end
