@@ -19,3 +19,16 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+## Usage
+
+``` shell
+mix drop
+mix create
+mix migrate
+iex -S mix phx.server
+1> PhoenixExample.ATableContext.create_a_table(%{name: "abc", password: "c"})
+2> PhoenixExample.ATableContext.list_a_table()
+3> PhoenixExample.BTableContext.create_b_table(%{name: "ab", age: 3})
+4> PhoenixExample.BTableContext.list_b_table()
+```
