@@ -39,7 +39,7 @@ config :phoenix_example, PhoenixExample.MysqlRepo,
   password: "zan3Kie1",
   database: "test_db",
   hostname: "localhost",
-  port: 3800,
+  port: 3306,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 

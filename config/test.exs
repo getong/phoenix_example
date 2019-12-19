@@ -14,7 +14,7 @@ config :phoenix_example, PhoenixExample.MysqlRepo,
   database: "test_db",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
-  port: 3800
+  port: 3306
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
