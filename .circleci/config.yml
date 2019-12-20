@@ -34,12 +34,15 @@ jobs:
       - run: mix deps.get
       - run: mix ecto.create
       - run: mix test
-#      - run: sudo apt-get update && sudo apt-get install -y apt-transport-https apt-utils
-#      - run: curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-#      - run: echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-#      - run: sudo apt-get update && sudo apt-get install -y yarn && yarn -v
-#      - run: cd assets && yarn install && node node_modules/webpack/bin/webpack.js --mode development && cd ..
-#      - run: MIX_ENV=prod mix compile
-#      - run: MIX_ENV=prod mix phx.digest
-#      - run: MIX_ENV=prod mix distillery.init
-#      - run: MIX_ENV=prod mix distillery.release
+      - run: sudo apt-get update && sudo apt-get install -y apt-transport-https apt-utils curl
+      - run: curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
+      - run: sudo bash nodesource_setup.sh
+      - run: sudo apt install -y nodejs
+      - run: curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+      - run: echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+      - run: sudo apt-get update && sudo apt-get install yarn
+      - run: cd assets && yarn install && node node_modules/webpack/bin/webpack.js --mode development && cd ..
+      - run: MIX_ENV=prod mix compile
+      - run: MIX_ENV=prod mix phx.digest
+      - run: MIX_ENV=prod mix distillery.init
+      - run: MIX_ENV=prod mix distillery.release
