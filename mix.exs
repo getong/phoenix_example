@@ -50,7 +50,7 @@ defmodule PhoenixExample.MixProject do
       {:quantum, "~> 2.3"},
       {:logger_file_backend, "~> 0.0.11"},
       {:distillery, "~> 2.1.0", runtime: false},
-      {:elastic, "~> 3.5"},
+      {:elastix, "~> 0.7.1"},
       {:libcluster, "~> 3.1"},
       {:redix, "~> 0.10.4"}
     ]
