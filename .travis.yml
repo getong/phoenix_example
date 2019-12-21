@@ -7,7 +7,7 @@ otp_release: '22.2'
 jobs:
   include:
     - os: linux
-      dist: bionic
+      dist: xenial
 
 services:
   - docker
