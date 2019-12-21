@@ -35,7 +35,7 @@ jobs:
       - run: mix ecto.create
       - run: mix test
       - run: sudo apt-get update && sudo apt-get install -y apt-transport-https apt-utils curl
-      - run: curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
+      - run: curl -sL https://deb.nodesource.com/setup_13.x -o nodesource_setup.sh
       - run: sudo bash nodesource_setup.sh
       - run: sudo apt install -y nodejs
       - run: curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
