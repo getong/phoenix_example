@@ -72,7 +72,7 @@ jobs:
       with:
         host port: 3306
         container port: 3306
-        mariadb version: 10.4.10
+        mariadb version: 10.4.11
         mysql database: test_db
         mysql root password: zan3Kie1
     - name: Install Dependencies

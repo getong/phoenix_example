@@ -7,13 +7,12 @@ jobs:
     docker:
       # specify the version here
       - image: circleci/elixir:1.9.4
-      - image: circleci/node:13.4.0
       - image: circleci/postgres:12.1
         environment:
           POSTGRES_USER: postgres
           POSTGRES_PASSword: postgres
           POSTGRES_DB: phoenix_example_test
-      - image: "mariadb:10.4.10"
+      - image: "mariadb:10.4.11"
         environment:
           MYSQL_DATABASE: "test_db"
           MYSQL_USER: "root"
