@@ -1,0 +1,9 @@
+- [x] Mariadb
+- [x] Postgres
+- [x] enable github action test
+- [x] enable circleci test
+- [x] enable travisci test
+- [ ] Redis
+- [ ] add typescript example
+- [ ] GraphQL example
+- [ ] elastic search

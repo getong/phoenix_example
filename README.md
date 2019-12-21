@@ -34,3 +34,7 @@ iex -S mix phx.server
 3> PhoenixExample.BTableContext.create_b_table(%{name: "ab", age: 3})
 4> PhoenixExample.BTableContext.list_b_table()
 ```
+
+> Note: This is a work in progress, see the
+[TODO](TODO.md) for more
+information on what still needs to be done.
