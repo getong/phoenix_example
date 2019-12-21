@@ -21,6 +21,7 @@ defmodule PhoenixExample.Application do
       # Start the Ecto repository
       PhoenixExample.PostgresRepo,
       {PhoenixExample.MysqlRepo, []},
+      PhoenixExample.RedixRepo,
       # Start the endpoint when the application starts
       PhoenixExampleWeb.Endpoint
       # Starts a worker by calling: PhoenixExample.Worker.start_link(arg)
