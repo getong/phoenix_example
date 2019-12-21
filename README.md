@@ -1,6 +1,7 @@
 # PhoenixExample
 [![Github CI](https://github.com/getong/phoenix_example/workflows/elixir_ci/badge.svg)](https://github.com/getong/phoenix_example/workflows/elixir_ci/badge.svg)
 [![CircleCI](https://circleci.com/gh/getong/phoenix_example.svg?style=svg)](https://circleci.com/gh/getong/phoenix_example)
+[![Build Status](https://travis-ci.org/getong/phoenix_example.svg?branch=master)](https://travis-ci.org/getong/phoenix_example)
 
 To start your Phoenix server:
 

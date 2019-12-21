@@ -1,0 +1,35 @@
+language: elixir
+
+elixir:
+  - '1.9.4'
+otp_release: '22.2'
+
+services:
+  - docker
+
+before_install:
+  - docker pull postgres:12.1
+  - docker run -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=phoenix_example_test -d -p 5432:5432 postgres:12.1
+  - docker pull mariadb:10.4.11
+  - docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=zan3Kie1 -e MYSQL_DATABASE=test_db -d mariadb:10.4.11
+
+install:
+  - sudo apt-get update && sudo apt-get install -y apt-transport-https apt-utils curl
+  - curl -sL https://deb.nodesource.com/setup_13.x -o nodesource_setup.sh
+  - sudo bash nodesource_setup.sh
+  - sudo apt install -y nodejs
+  - curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  - sudo apt-get update && sudo apt-get install yarn
+
+script:
+  - mix local.rebar --force
+  - mix local.hex --force
+  - mix deps.get
+  - mix ecto.create
+  - mix test
+  - cd assets && yarn install && node node_modules/webpack/bin/webpack.js --mode development && cd ..
+  - MIX_ENV=prod mix compile
+  - MIX_ENV=prod mix phx.digest
+  - MIX_ENV=prod mix distillery.init
+  - MIX_ENV=prod mix distillery.release
