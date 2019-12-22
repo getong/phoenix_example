@@ -17,6 +17,7 @@ before_install:
   - docker run -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=phoenix_example_test -d -p 5432:5432 postgres:12.1
   - docker pull mariadb:10.4.11
   - docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=zan3Kie1 -e MYSQL_DATABASE=test_db -d mariadb:10.4.11
+  - docker run -p 6379:6379 -d redis:5.0.7 redis-server --requirepass TaeT9ahc --port 6379
 
 install:
   - sudo apt-get update && sudo apt-get install -y apt-transport-https apt-utils curl

@@ -6,11 +6,11 @@ jobs:
   build:
 
     runs-on: ubuntu-18.04
-    services:
-      redis:
-        image: redis
-        ports:
-          - 6379:6379
+##    services:
+##      redis:
+##        image: redis
+##        ports:
+##          - 6379:6379
 
     steps:
     - uses: actions/checkout@v1
@@ -29,6 +29,12 @@ jobs:
         mariadb version: 10.4.11
         mysql database: test_db
         mysql root password: zan3Kie1
+    - uses: getong/redis-action@v1
+      with:
+        redis version: '5.0.7'
+        host port: 6379
+        container port: 6379
+        redis password: 'TaeT9ahc'
     - name: Install Dependencies
       run: |
         wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
