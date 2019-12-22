@@ -5,9 +5,11 @@ defmodule PhoenixExample.RedixRepo do
 
   def child_spec(_args) do
     # Specs for the Redix connections.
+    redis_info = Application.get_env(:phoenix_example, :redis_info)
+
     children =
       for i <- 0..(@pool_size - 1) do
-        Supervisor.child_spec({Redix, name: :"redix_repo#{i}"}, id: {Redix, i})
+        Supervisor.child_spec({Redix, [{:name, :"redix_repo#{i}"} | redis_info]}, id: {Redix, i})
       end
 
     # Spec for the supervisor that will supervise the Redix connections.

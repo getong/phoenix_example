@@ -8,7 +8,8 @@
 import Mix.Config
 
 config :phoenix_example,
-  ecto_repos: [PhoenixExample.PostgresRepo, PhoenixExample.MysqlRepo]
+  ecto_repos: [PhoenixExample.PostgresRepo, PhoenixExample.MysqlRepo],
+  redis_info: [host: "localhost", port: 6379, password: "TaeT9ahc"]
 
 # Configures the endpoint
 config :phoenix_example, PhoenixExampleWeb.Endpoint,
