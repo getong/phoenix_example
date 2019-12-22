@@ -3,7 +3,7 @@
 - [x] enable github action test
 - [x] enable circleci test
 - [x] enable travisci test
-- [ ] Redis
+- [x] Redis
 - [ ] add typescript example
 - [ ] GraphQL example
 - [ ] elastic search
