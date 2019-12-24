@@ -6,4 +6,6 @@
 - [x] Redis
 - [ ] add typescript example
 - [ ] GraphQL example
-- [x] elastic search
+- [ ] elastic search
+- [ ] Kafka
+- [ ] RabbitMQ
