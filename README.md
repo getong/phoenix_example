@@ -34,6 +34,11 @@ iex -S mix phx.server
 3> PhoenixExample.BTableContext.create_b_table(%{name: "ab", age: 3})
 4> PhoenixExample.BTableContext.list_b_table()
 ```
+elasticsearch usage:
+
+``` elixir
+Elastix.Index.create("http://localhost:9200", "twitter", %{})
+```
 
 > Note: This is a work in progress, see the
 [TODO](TODO.md) for more

@@ -6,4 +6,4 @@
 - [x] Redis
 - [ ] add typescript example
 - [ ] GraphQL example
-- [ ] elastic search
+- [x] elastic search
