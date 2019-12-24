@@ -52,7 +52,9 @@ defmodule PhoenixExample.MixProject do
       {:distillery, "~> 2.1.0", runtime: false},
       {:elastix, "~> 0.7.1"},
       {:libcluster, "~> 3.1"},
-      {:redix, "~> 0.10.4"}
+      {:redix, "~> 0.10.4"},
+      {:kafka_ex, "~> 0.10.0"},
+      {:snappy, "~> 1.1"}
     ]
   end
 
