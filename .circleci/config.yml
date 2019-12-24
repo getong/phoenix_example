@@ -30,7 +30,7 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run: docker run -p 6379:6379 -d redis:5.0.7 redis-server --requirepass TaeT9ahc --port 6379
-      - run: docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -d elasticsearch:7.5.0
+      - run: docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -d elasticsearch:7.5.1
       - run: mix local.rebar --force
       - run: mix local.hex --force
       - run: mix deps.get
