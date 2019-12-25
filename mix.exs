@@ -53,9 +53,10 @@ defmodule PhoenixExample.MixProject do
       {:elastix, "~> 0.7.1"},
       {:libcluster, "~> 3.1"},
       {:redix, "~> 0.10.4"},
-      {:kafka_ex, "~> 0.10.0"},
       {:snappy, "~> 1.1"},
-      {:amqp, "~> 1.4"}
+      ## {:kafka_ex, "~> 0.10.0"},
+      {:amqp, "~> 1.4"},
+      {:prometheus, "~> 4.4"}
     ]
   end
 
