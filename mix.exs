@@ -54,7 +54,8 @@ defmodule PhoenixExample.MixProject do
       {:libcluster, "~> 3.1"},
       {:redix, "~> 0.10.4"},
       {:kafka_ex, "~> 0.10.0"},
-      {:snappy, "~> 1.1"}
+      {:snappy, "~> 1.1"},
+      {:amqp, "~> 1.4"}
     ]
   end
 
