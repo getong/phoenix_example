@@ -16,7 +16,16 @@ config :phoenix_example, PhoenixExampleWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "f4M8HRiXYLj9MUHe4w/WZ8E5H7WZG+kkLS9IR0+c5r5cF09CC2SwV7WYqm2rm7Cd",
   render_errors: [view: PhoenixExampleWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: PhoenixExample.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: PhoenixExample.PubSub, adapter: Phoenix.PubSub.PG2],
+  ## copy from https://hexdocs.pm/phoenix/endpoint.html
+  https: [
+    port: 4001,
+    otp_app: :phoenix_example,
+    keyfile: "priv/cert/selfsigned_key.pem",
+    certfile: "priv/cert/selfsigned.pem"
+    # OPTIONAL Key for intermediate certificates:
+    # cacertfile: "priv/cert/selfsigned.pem"
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -46,6 +55,7 @@ config :phoenix_example, PhoenixExample.MysqlRepo,
 
 config :elastix,
   json_codec: Jason
+
 #  httpoison_options: [hackney: [pool: :elastix_pool]]
 
 # Import environment specific config. This must remain at the bottom
