@@ -43,3 +43,13 @@ Elastix.Index.create("http://localhost:9200", "twitter", %{})
 > Note: This is a work in progress, see the
 [TODO](TODO.md) for more
 information on what still needs to be done.
+
+## generate a certificate
+copy from [SSL on localhost with Phoenix Framework](https://ohanhi.com/phoenix-ssl-localhost.html)
+``` shell
+# generate key
+$ openssl genrsa -out selfsigned_key.pem 2048
+# generate cert
+$ openssl req -new -x509 -key selfsigned_key.pem -out selfsigned.pem -days 3650 -subj /CN=localhost
+```
+Put them in a directory called priv/cert/.
