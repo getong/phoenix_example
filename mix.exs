@@ -55,7 +55,8 @@ defmodule PhoenixExample.MixProject do
       {:redix, "~> 0.10.4"},
       {:snappy, "~> 1.1"},
       ## {:kafka_ex, "~> 0.10.0"},
-      {:amqp, "~> 1.4"},
+      {:gen_amqp, "~> 7.0"},
+      {:amqp, "~> 1.4", override: true},
       {:prometheus, "~> 4.4"},
       {:neuron, "~> 4.1"}
     ]
