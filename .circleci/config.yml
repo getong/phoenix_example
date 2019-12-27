@@ -12,16 +12,17 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSword: postgres
           POSTGRES_DB: phoenix_example_test
-      - image: "mariadb:10.4.11"
+      - image: mariadb:10.4.11
         environment:
           MYSQL_DATABASE: "test_db"
           MYSQL_USER: "root"
           MYSQL_ROOT_PASSWORD: "zan3Kie1"
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
+      - image: rabbitmq:3.8.2-management-alpine
+        environment:
+          RABBITMQ_DEFAULT_USER: "user"
+          RABBITMQ_DEFAULT_PASS: "Anaith7x"
+          RABBITMQ_ERLANG_COOKIE: "Chiew0irtoh9Peeg"
+          RABBITMQ_DEFAULT_VHOST: "/"
 
     working_directory: ~/repo
     steps:
@@ -31,6 +32,8 @@ jobs:
       # specify any bash command here prefixed with `run: `
       - run: docker run -p 6379:6379 -d redis:5.0.7 redis-server --requirepass TaeT9ahc --port 6379
       - run: docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -d elasticsearch:7.5.1
+      ## see https://discuss.circleci.com/t/cannot-connect-to-rabbitmq/19830 , the rabbitmq need some times to start
+      - run: sleep 10
       - run: mix local.rebar --force
       - run: mix local.hex --force
       - run: mix deps.get

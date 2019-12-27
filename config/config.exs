@@ -56,6 +56,12 @@ config :phoenix_example, PhoenixExample.MysqlRepo,
 config :elastix,
   json_codec: Jason
 
+config :gen_amqp,
+        connections: [
+          {:static, StaticConnSup, [{ConnHub, "amqp://user:Anaith7x@localhost"}]}
+        ],
+        error_handler: ErrorHandler
+
 #  httpoison_options: [hackney: [pool: :elastix_pool]]
 
 # Import environment specific config. This must remain at the bottom
