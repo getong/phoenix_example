@@ -58,7 +58,7 @@ config :elastix,
 
 config :gen_amqp,
   connections: [
-    {:static, StaticConnSup, [ConnHub: "amqp://user:Anaith7x@localhost"]}
+    {:static, StaticConnSup, [ConnHub: "amqp://user:Anaith7x@localhost:5672/vhost_name"]}
   ],
   error_handler: ErrorHandler
 

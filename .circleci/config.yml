@@ -22,7 +22,7 @@ jobs:
           RABBITMQ_DEFAULT_USER: "user"
           RABBITMQ_DEFAULT_PASS: "Anaith7x"
           RABBITMQ_ERLANG_COOKIE: "Chiew0irtoh9Peeg"
-          RABBITMQ_DEFAULT_VHOST: "/"
+          RABBITMQ_DEFAULT_VHOST: "vhost_name"
 
     working_directory: ~/repo
     steps:

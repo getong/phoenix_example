@@ -30,12 +30,13 @@ jobs:
         host port: 6379
         container port: 6379
         redis password: 'TaeT9ahc'
-    - uses: getong/rabbitmq-action@v1.1
+    - uses: getong/rabbitmq-action@v1.2
       with:
         rabbitmq version: '3.8.2-management-alpine'
         host port: 5672
         rabbitmq user: 'user'
         rabbitmq password: 'Anaith7x'
+        rabbitmq vhost: 'vhost_name'
     - name: Install Dependencies
       run: |
         wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
