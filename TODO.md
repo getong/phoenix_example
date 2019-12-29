@@ -10,6 +10,6 @@
 - [ ] Kafka
 - [ ] RabbitMQ
 - [ ] Prometheus
-- [ ] support http
+- [x] support http
 - [ ] support https
 - [ ] support websocket
