@@ -13,4 +13,4 @@
 - [x] support http
 - [ ] support https
 - [ ] support websocket
-- [ ] cron task
+- [x] cron task

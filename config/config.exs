@@ -62,6 +62,12 @@ config :gen_amqp,
   ],
   error_handler: ErrorHandler
 
+config :phoenix_example, PhoenixExample.CronScheduler,
+  jobs: [
+    # Every minute
+    # {"* * * * *",      {Heartbeat, :send, []}}
+  ]
+
 #  httpoison_options: [hackney: [pool: :elastix_pool]]
 
 # Import environment specific config. This must remain at the bottom

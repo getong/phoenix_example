@@ -23,9 +23,10 @@ defmodule PhoenixExample.Application do
       {PhoenixExample.MysqlRepo, []},
       PhoenixExample.RedixRepo,
       # Start the endpoint when the application starts
-      PhoenixExampleWeb.Endpoint
+      PhoenixExampleWeb.Endpoint,
       # Starts a worker by calling: PhoenixExample.Worker.start_link(arg)
       # {PhoenixExample.Worker, arg},
+      PhoenixExample.CronScheduler
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
