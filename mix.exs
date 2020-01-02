@@ -58,7 +58,8 @@ defmodule PhoenixExample.MixProject do
       {:gen_amqp, "~> 7.0"},
       {:amqp, "~> 1.4", override: true},
       {:prometheus, "~> 4.4"},
-      {:neuron, "~> 4.1"}
+      {:neuron, "~> 4.1"},
+      {:ra, "~> 1.0"}
     ]
   end
 
