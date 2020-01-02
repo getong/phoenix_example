@@ -6,6 +6,7 @@ config :phoenix_example, PhoenixExample.PostgresRepo,
   password: "postgres",
   database: "phoenix_example_test",
   hostname: "localhost",
+  port: 5432,
   pool: Ecto.Adapters.SQL.Sandbox
 
 config :phoenix_example, PhoenixExample.MysqlRepo,
