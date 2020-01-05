@@ -69,6 +69,10 @@ config :phoenix_example, PhoenixExample.CronScheduler,
     # {"* * * * *",      {Heartbeat, :send, []}}
   ]
 
+config :lager,
+  error_logger_redirect: false,
+  handlers: [level: :cirtical]
+
 #  httpoison_options: [hackney: [pool: :elastix_pool]]
 
 # Import environment specific config. This must remain at the bottom
