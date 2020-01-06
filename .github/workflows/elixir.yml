@@ -37,6 +37,12 @@ jobs:
         rabbitmq user: 'user'
         rabbitmq password: 'Anaith7x'
         rabbitmq vhost: 'vhost_name'
+    - uses: getong/elasticsearch-action@v1
+      with:
+        elasticsearch version: '7.5.1'
+        host port: 9200
+        container port: 9200
+        discovery type: 'single-node'
     - name: Install Dependencies
       run: |
         wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
