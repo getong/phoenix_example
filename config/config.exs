@@ -54,8 +54,24 @@ config :phoenix_example, PhoenixExample.MysqlRepo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
-config :elastix,
-  json_codec: Jason
+## copy from https://hexdocs.pm/elasticsearch/readme.html
+config :phoenix_example,
+       PhoenixExample.ElasticsearchCluster,
+       # The URL where Elasticsearch is hosted on your system
+       url: "http://localhost:9200",
+
+       # If you want to mock the responses of the Elasticsearch JSON API
+       # for testing or other purposes, you can inject a different module
+       # here. It must implement the Elasticsearch.API behaviour.
+       api: Elasticsearch.API.HTTP,
+
+       # Customize the library used for JSON encoding/decoding.
+       # or Jason
+       json_library: Jason,
+       default_options: [
+         timeout: 15_000,
+         recv_timeout: 15_000
+       ]
 
 config :gen_amqp,
   connections: [
@@ -72,8 +88,6 @@ config :phoenix_example, PhoenixExample.CronScheduler,
 config :lager,
   error_logger_redirect: false,
   handlers: [level: :cirtical]
-
-#  httpoison_options: [hackney: [pool: :elastix_pool]]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

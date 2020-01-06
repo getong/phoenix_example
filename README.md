@@ -53,3 +53,9 @@ $ openssl genrsa -out selfsigned_key.pem 2048
 $ openssl req -new -x509 -key selfsigned_key.pem -out selfsigned.pem -days 3650 -subj /CN=localhost
 ```
 Put them in a directory called priv/cert/.
+
+## elasticsearch
+
+``` elixir
+Elasticsearch.get(MyApp.ElasticsearchCluster, "/_cat/health")
+```

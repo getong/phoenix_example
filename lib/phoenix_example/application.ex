@@ -26,7 +26,8 @@ defmodule PhoenixExample.Application do
       PhoenixExampleWeb.Endpoint,
       # Starts a worker by calling: PhoenixExample.Worker.start_link(arg)
       # {PhoenixExample.Worker, arg},
-      PhoenixExample.CronScheduler
+      PhoenixExample.CronScheduler,
+      PhoenixExample.ElasticsearchCluster
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
