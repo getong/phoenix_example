@@ -1,4 +1,8 @@
 defmodule PhoenixExample.ATableContext.ATable do
+  @moduledoc """
+  The BTable schema
+  """
+
   use Ecto.Schema
   import Ecto.Changeset
 

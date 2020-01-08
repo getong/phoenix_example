@@ -1,4 +1,8 @@
 defmodule PhoenixExample.RedixRepo do
+  @moduledoc """
+  The redis handler
+  """
+
   ## copy from https://hexdocs.pm/redix/real-world-usage.html#name-based-pool
 
   @pool_size 5
