@@ -41,3 +41,4 @@ script:
   - MIX_ENV=prod mix phx.digest
   - MIX_ENV=prod mix distillery.init
   - MIX_ENV=prod mix distillery.release
+  - mix credo

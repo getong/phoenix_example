@@ -74,6 +74,7 @@ jobs:
         MIX_ENV=prod mix phx.digest
         MIX_ENV=prod mix distillery.init
         MIX_ENV=prod mix distillery.release
+        mix credo
         #./_build/prod/rel/phoenix_example/bin/phoenix_example start
         #./_build/prod/rel/phoenix_example/bin/phoenix_example ping
         #./_build/prod/rel/phoenix_example/bin/phoenix_example stop
