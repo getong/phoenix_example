@@ -51,7 +51,7 @@ defmodule PhoenixExample.MixProject do
       {:logger_file_backend, "~> 0.0.11"},
       {:distillery, "~> 2.1.0", runtime: false},
       {:elasticsearch, "~> 1.0.0"},
-      {:libcluster, "~> 3.1"},
+      {:libcluster, "~> 3.2"},
       {:redix, "~> 0.10.4"},
       {:snappy, "~> 1.1"},
       ## {:kafka_ex, "~> 0.10.0"},
