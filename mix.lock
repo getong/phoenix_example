@@ -61,6 +61,7 @@
   "recon": {:hex, :recon, "2.5.0", "2f7fcbec2c35034bade2f9717f77059dc54eb4e929a3049ca7ba6775c0bd66cd", [:mix, :rebar3], [], "hexpm"},
   "redix": {:hex, :redix, "0.10.4", "b87c1728e02dd8bad0e8ed2a97c4855d9677dfcefb293800fdb1ca726278ea27", [:mix], [{:castore, "~> 0.1.0", [hex: :castore, repo: "hexpm", optional: true]}, {:telemetry, "~> 0.4.0", [hex: :telemetry, repo: "hexpm", optional: false]}], "hexpm"},
   "snappy": {:hex, :snappy, "1.1.1", "d63449a58f1358046b7adaec166ae8929c2b19881e76c4e13284304fe887c39a", [:rebar3], [], "hexpm"},
+  "spg": {:hex, :spg, "1.1.1", "099b039197261da26f8364af8cfce8eb8cb2a10f08f89796f9d3fe8ac7e2e448", [:rebar3], [], "hexpm"},
   "ssl_verify_fun": {:hex, :ssl_verify_fun, "1.1.5", "6eaf7ad16cb568bb01753dbbd7a95ff8b91c7979482b95f38443fe2c8852a79b", [:make, :mix, :rebar3], [], "hexpm"},
   "swarm": {:hex, :swarm, "3.4.0", "64f8b30055d74640d2186c66354b33b999438692a91be275bb89cdc7e401f448", [:mix], [{:gen_state_machine, "~> 2.0", [hex: :gen_state_machine, repo: "hexpm", optional: false]}, {:libring, "~> 1.0", [hex: :libring, repo: "hexpm", optional: false]}], "hexpm"},
   "telemetry": {:hex, :telemetry, "0.4.1", "ae2718484892448a24470e6aa341bc847c3277bfb8d4e9289f7474d752c09c7f", [:rebar3], [], "hexpm"},
