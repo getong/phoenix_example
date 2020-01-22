@@ -62,7 +62,8 @@ defmodule PhoenixExample.MixProject do
       {:ra, "~> 1.0"},
       {:credo, "~> 1.1", only: [:dev, :test]},
       {:vex, github: "CargoSense/vex", override: true},
-      {:spg, "~> 1.1"}
+      {:spg, "~> 1.1"},
+      {:mongodb, "~> 0.5.1"}
     ]
   end
 
