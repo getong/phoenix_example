@@ -26,6 +26,13 @@ jobs:
       - image: elasticsearch:7.5.1
         environment:
          discovery.type: single-node
+      - image: mongo:4.2-bionic
+        environment:
+          MONGO_INITDB_ROOT_USERNAME: "mongoadmin"
+          MONGO_INITDB_ROOT_PASSWORD: "Iushahb0"
+          MONGO_INITDB_DATABASE: "notadmin"
+          MONGO_NON_ROOT_USERNAME: "normal"
+          MONGO_NON_ROOT_PASSWORD: "Iushahb0"
 
     working_directory: ~/repo
     steps:
