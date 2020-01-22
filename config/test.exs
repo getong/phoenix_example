@@ -17,6 +17,15 @@ config :phoenix_example, PhoenixExample.MysqlRepo,
   show_sensitive_data_on_connection_error: true,
   port: 3306
 
+config :phoenix_example, :mongodb_info,
+  url: "127.0.0.1",
+  username: "mongoadmin",
+  password: "Iushahb0",
+  port: 27017,
+  database: "admin",
+  name: :mongo,
+  pool_size: 2
+
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :phoenix_example, PhoenixExampleWeb.Endpoint,

@@ -73,6 +73,15 @@ config :phoenix_example,
          recv_timeout: 15_000
        ]
 
+config :phoenix_example, :mongodb_info,
+  url: "127.0.0.1",
+  username: "mongoadmin",
+  password: "Iushahb0",
+  port: 27017,
+  database: "admin",
+  name: :mongo,
+  pool_size: 2
+
 config :gen_amqp,
   connections: [
     {:static, StaticConnSup, [ConnHub: "amqp://user:Anaith7x@localhost:5672/vhost_name"]}
