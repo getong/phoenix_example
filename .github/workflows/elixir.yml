@@ -43,7 +43,7 @@ jobs:
         host port: 9200
         container port: 9200
         discovery type: 'single-node'
-    - uses: getong/mongo-action@v1
+    - uses: getong/mongo-action@v1.1
       with:
         mongo version: '4.2-bionic'
         host port: 27017
