@@ -30,8 +30,8 @@ defmodule PhoenixExample.Application do
       # Starts a worker by calling: PhoenixExample.Worker.start_link(arg)
       # {PhoenixExample.Worker, arg},
       Spec.worker(Mongo, [mongodb_connection_info]),
-      PhoenixExample.CronScheduler,
-      PhoenixExample.ElasticsearchCluster
+      # PhoenixExample.ElasticsearchCluster,
+      PhoenixExample.CronScheduler
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
