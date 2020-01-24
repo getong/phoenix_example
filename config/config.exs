@@ -9,7 +9,8 @@ import Mix.Config
 
 config :phoenix_example,
   ecto_repos: [PhoenixExample.PostgresRepo, PhoenixExample.MysqlRepo],
-  redis_info: [host: "localhost", port: 6379, password: "TaeT9ahc"]
+  redis_info: [host: "localhost", port: 6379, password: "TaeT9ahc"],
+  start_elasticsearch: true
 
 # Configures the endpoint
 config :phoenix_example, PhoenixExampleWeb.Endpoint,
@@ -55,23 +56,22 @@ config :phoenix_example, PhoenixExample.MysqlRepo,
   pool_size: 10
 
 ## copy from https://hexdocs.pm/elasticsearch/readme.html
-config :phoenix_example,
-       PhoenixExample.ElasticsearchCluster,
-       # The URL where Elasticsearch is hosted on your system
-       url: "http://localhost:9200",
+config :phoenix_example, PhoenixExample.ElasticsearchCluster,
+  # The URL where Elasticsearch is hosted on your system
+  url: "http://localhost:9200",
 
-       # If you want to mock the responses of the Elasticsearch JSON API
-       # for testing or other purposes, you can inject a different module
-       # here. It must implement the Elasticsearch.API behaviour.
-       api: Elasticsearch.API.HTTP,
+  # If you want to mock the responses of the Elasticsearch JSON API
+  # for testing or other purposes, you can inject a different module
+  # here. It must implement the Elasticsearch.API behaviour.
+  api: Elasticsearch.API.HTTP,
 
-       # Customize the library used for JSON encoding/decoding.
-       # or Jason
-       json_library: Jason,
-       default_options: [
-         timeout: 15_000,
-         recv_timeout: 15_000
-       ]
+  # Customize the library used for JSON encoding/decoding.
+  # or Jason
+  json_library: Jason,
+  default_options: [
+    timeout: 15_000,
+    recv_timeout: 15_000
+  ]
 
 config :phoenix_example, :mongodb_info,
   url: "127.0.0.1",
