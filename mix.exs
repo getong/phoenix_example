@@ -60,7 +60,7 @@ defmodule PhoenixExample.MixProject do
       {:prometheus, "~> 4.4"},
       {:neuron, "~> 4.1"},
       {:ra, "~> 1.0"},
-      {:credo, "~> 1.1", only: [:dev, :test]},
+      {:credo, "~> 1.2", only: [:dev, :test]},
       {:vex, github: "CargoSense/vex", override: true},
       {:spg, "~> 1.1"},
       {:mongodb, "~> 0.5.1"}
