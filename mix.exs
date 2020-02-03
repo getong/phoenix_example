@@ -57,7 +57,7 @@ defmodule PhoenixExample.MixProject do
       ## {:kafka_ex, "~> 0.10.0"},
       {:gen_amqp, "~> 7.0"},
       {:amqp, "~> 1.4", override: true},
-      {:prometheus, "~> 4.4"},
+      {:prometheus, "~> 4.5"},
       {:neuron, "~> 4.1"},
       {:ra, "~> 1.0"},
       {:credo, "~> 1.2", only: [:dev, :test]},
