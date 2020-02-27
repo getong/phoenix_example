@@ -47,7 +47,7 @@ defmodule PhoenixExample.MixProject do
       {:jason, "~> 1.1"},
       {:plug_cowboy, "~> 2.1"},
       {:absinthe_plug, "~> 1.4"},
-      {:quantum, "~> 2.3"},
+      {:quantum, "~> 2.4"},
       {:logger_file_backend, "~> 0.0.11"},
       {:distillery, "~> 2.1", runtime: false},
       {:elasticsearch, "~> 1.0"},
