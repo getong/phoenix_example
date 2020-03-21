@@ -86,3 +86,5 @@ jobs:
         #./_build/prod/rel/phoenix_example/bin/phoenix_example start
         #./_build/prod/rel/phoenix_example/bin/phoenix_example ping
         #./_build/prod/rel/phoenix_example/bin/phoenix_example stop
+    - name: test elasticsearch
+      run: curl -X GET "localhost:9200/_cat/nodes?v&pretty"
