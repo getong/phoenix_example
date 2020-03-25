@@ -37,7 +37,7 @@ defmodule PhoenixExample.MixProject do
       {:phoenix, "~> 1.4"},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.1"},
-      {:ecto_sql, "~> 3.3"},
+      {:ecto_sql, "~> 3.4"},
       {:myxql, "~> 0.3.2"},
       {:geo, "~> 3.3"},
       {:postgrex, "~> 0.15.3"},
