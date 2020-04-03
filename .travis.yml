@@ -18,7 +18,7 @@ before_install:
   - docker pull mariadb:10.4.11
   - docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=zan3Kie1 -e MYSQL_DATABASE=test_db -d mariadb:10.4.11
   - docker run -p 6379:6379 -d redis:5.0.7 redis-server --requirepass TaeT9ahc --port 6379
-  - docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -d elasticsearch:7.6.1
+  - docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -d elasticsearch:7.6.2
   - docker run -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=Anaith7x -e RABBITMQ_ERLANG_COOKIE='Chiew0irtoh9Peeg' -e RABBITMQ_DEFAULT_VHOST='vhost_name' -d rabbitmq:3.8.3-management-alpine
   - docker run -p 27017:27017 -p 8081:8081 -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=Iushahb0 -e MONGO_INITDB_DATABASE=notadmin -e MONGO_NON_ROOT_USERNAME=normal -e MONGO_NON_ROOT_PASSWORD=secret -d mongo:4.2-bionic
 
