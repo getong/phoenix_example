@@ -59,11 +59,11 @@ jobs:
       - run: cd assets && yarn install && node node_modules/webpack/bin/webpack.js --mode development && cd ..
       - run:
           command: MIX_ENV=prod mix compile
-          no_output_timeout: 30m
+          no_output_timeout: 45m
       - run: MIX_ENV=prod mix phx.digest
       - run: MIX_ENV=prod mix distillery.init
       - run: MIX_ENV=prod mix distillery.release
       - run:
           command: mix credo
-          no_output_timeout: 30m
+          no_output_timeout: 45m
       - run: curl -X GET "localhost:9200/_cat/nodes?v&pretty"
