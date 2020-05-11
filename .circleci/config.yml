@@ -57,9 +57,13 @@ jobs:
       - run: echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
       - run: sudo apt-get update && sudo apt-get install yarn
       - run: cd assets && yarn install && node node_modules/webpack/bin/webpack.js --mode development && cd ..
-      - run: MIX_ENV=prod mix compile
+      - run:
+          command: MIX_ENV=prod mix compile
+          no_output_timeout: 30m
       - run: MIX_ENV=prod mix phx.digest
       - run: MIX_ENV=prod mix distillery.init
       - run: MIX_ENV=prod mix distillery.release
-      - run: mix credo
+      - run:
+          command: mix credo
+          no_output_timeout: 30m
       - run: curl -X GET "localhost:9200/_cat/nodes?v&pretty"
