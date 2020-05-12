@@ -62,8 +62,8 @@ jobs:
         mongo password: 'Iushahb0'
     - name: Install Dependencies
       run: |
-        wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
-        sudo dpkg -i erlang-solutions_1.0_all.deb
+        wget http://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
+        sudo dpkg -i erlang-solutions_2.0_all.deb
         ## see https://github.community/t5/GitHub-Actions/ubuntu-latest-Apt-repository-list-issues/td-p/41122 for more info
         sudo apt-get update || echo "ok"
         sudo apt-get install -y erlang wget unzip nodejs
