@@ -49,7 +49,7 @@ jobs:
       - run: mix deps.get
       - run:
           command: mix ecto.create
-          no_output_timeout: 45m
+          no_output_timeout: 120m
       - run: mix test
       - run: sudo apt-get update && sudo apt-get install -y apt-transport-https apt-utils curl
       - run: curl -sL https://deb.nodesource.com/setup_13.x -o nodesource_setup.sh
@@ -61,11 +61,11 @@ jobs:
       - run: cd assets && yarn install && node node_modules/webpack/bin/webpack.js --mode development && cd ..
       - run:
           command: MIX_ENV=prod mix compile
-          no_output_timeout: 45m
+          no_output_timeout: 120m
       - run: MIX_ENV=prod mix phx.digest
       - run: MIX_ENV=prod mix distillery.init
       - run: MIX_ENV=prod mix distillery.release
       - run:
           command: mix credo
-          no_output_timeout: 45m
+          no_output_timeout: 120m
       - run: curl -X GET "localhost:9200/_cat/nodes?v&pretty"
