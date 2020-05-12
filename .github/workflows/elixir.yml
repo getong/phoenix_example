@@ -74,10 +74,12 @@ jobs:
         mix local.rebar --force
         mix local.hex --force
         mix deps.get
+        mix compile
     - name: Run Tests
       run: |
         export PATH=./elixir/bin/:$PATH
         MIX_ENV=test mix compile
+        mix ecto.create
         mix test
         cd assets
         sudo npm install -g yarn

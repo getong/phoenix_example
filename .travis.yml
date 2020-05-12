@@ -36,6 +36,7 @@ script:
   - mix local.rebar --force
   - mix local.hex --force
   - mix deps.get
+  - mix compile
   - mix ecto.create
   - mix test
   - cd assets && yarn install && node node_modules/webpack/bin/webpack.js --mode development && cd ..
