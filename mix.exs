@@ -53,7 +53,7 @@ defmodule PhoenixExample.MixProject do
       {:elasticsearch, "~> 1.0"},
       {:libcluster, "~> 3.2"},
       {:redix, "~> 0.10.7"},
-      {:snappy, "~> 1.1"},
+      {:snappyer, "~> 1.2"},
       ## {:kafka_ex, "~> 0.10.0"},
       {:gen_amqp, "~> 7.0"},
       {:amqp, "~> 1.4", override: true},
