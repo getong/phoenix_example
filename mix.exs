@@ -45,7 +45,7 @@ defmodule PhoenixExample.MixProject do
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:gettext, "~> 0.18.0"},
       {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.2"},
+      {:plug_cowboy, "~> 2.3"},
       {:absinthe_plug, "~> 1.5"},
       {:quantum, "~> 2.4"},
       {:logger_file_backend, "~> 0.0.11"},
