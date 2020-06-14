@@ -64,7 +64,8 @@ defmodule PhoenixExample.MixProject do
       {:vex, github: "CargoSense/vex", override: true},
       {:spg, "~> 1.1"},
       {:mongodb, "~> 0.5.1"},
-      {:protobuf, "~> 0.7.1"}
+      {:protobuf, "~> 0.7.1"},
+      {:phoenix_live_view, "~> 0.13.3"}
     ]
   end
 
