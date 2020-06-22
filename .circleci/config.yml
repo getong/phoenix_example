@@ -23,7 +23,7 @@ jobs:
           RABBITMQ_DEFAULT_PASS: "Anaith7x"
           RABBITMQ_ERLANG_COOKIE: "Chiew0irtoh9Peeg"
           RABBITMQ_DEFAULT_VHOST: "vhost_name"
-      - image: elasticsearch:7.6.2
+      - image: elasticsearch:7.8.0
         environment:
          discovery.type: single-node
       - image: mongo:4.2-bionic
