@@ -37,12 +37,13 @@ defmodule PhoenixExample.MixProject do
       {:phoenix, "~> 1.5"},
       {:phoenix_pubsub, "~> 2.0"},
       {:phoenix_ecto, "~> 4.1"},
+      {:phoenix_html, "~> 2.14"},
+      {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:phoenix_live_view, "~> 0.13.3"},
       {:ecto_sql, "~> 3.4"},
       {:myxql, "~> 0.4"},
       {:geo, "~> 3.3"},
       {:postgrex, "~> 0.15.5"},
-      {:phoenix_html, "~> 2.14"},
-      {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:gettext, "~> 0.18.0"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.3"},
@@ -64,8 +65,7 @@ defmodule PhoenixExample.MixProject do
       {:vex, github: "CargoSense/vex", override: true},
       {:spg, "~> 1.1"},
       {:mongodb, "~> 0.5.1"},
-      {:protobuf, "~> 0.7.1"},
-      {:phoenix_live_view, "~> 0.13.3"}
+      {:protobuf, "~> 0.7.1"}
     ]
   end
 
