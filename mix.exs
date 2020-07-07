@@ -47,6 +47,7 @@ defmodule PhoenixExample.MixProject do
       {:gettext, "~> 0.18.0"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.3"},
+      {:ranch, "~> 2.0", override: true},
       {:absinthe_plug, "~> 1.5"},
       {:quantum, "~> 3.0"},
       {:logger_file_backend, "~> 0.0.11"},
