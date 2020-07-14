@@ -39,7 +39,7 @@ defmodule PhoenixExample.MixProject do
       {:phoenix_ecto, "~> 4.1"},
       {:phoenix_html, "~> 2.14"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:phoenix_live_view, "~> 0.13.3"},
+      {:phoenix_live_view, "~> 0.14.1"},
       {:ecto_sql, "~> 3.4"},
       {:myxql, "~> 0.4"},
       {:geo, "~> 3.3"},
