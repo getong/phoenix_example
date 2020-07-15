@@ -39,12 +39,12 @@ defmodule PhoenixExample.MixProject do
       {:phoenix_ecto, "~> 4.1"},
       {:phoenix_html, "~> 2.14"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:phoenix_live_view, "~> 0.14.1"},
+      {:phoenix_live_view, "~> 0.14"},
       {:ecto_sql, "~> 3.4"},
       {:myxql, "~> 0.4"},
       {:geo, "~> 3.3"},
-      {:postgrex, "~> 0.15.5"},
-      {:gettext, "~> 0.18.0"},
+      {:postgrex, "~> 0.15"},
+      {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.3"},
       {:ranch, "~> 2.0", override: true},
@@ -54,7 +54,7 @@ defmodule PhoenixExample.MixProject do
       {:distillery, "~> 2.1", runtime: false},
       {:elasticsearch, "~> 1.0"},
       {:libcluster, "~> 3.2"},
-      {:redix, "~> 0.11.1"},
+      {:redix, "~> 0.11"},
       {:snappyer, "~> 1.2"},
       ## {:kafka_ex, "~> 0.10.0"},
       {:gen_amqp, "~> 7.0"},
@@ -65,8 +65,8 @@ defmodule PhoenixExample.MixProject do
       {:credo, "~> 1.4", only: [:dev, :test]},
       {:vex, github: "CargoSense/vex", override: true},
       {:spg, "~> 1.1"},
-      {:mongodb, "~> 0.5.1"},
-      {:protobuf, "~> 0.7.1"}
+      {:mongodb, "~> 0.5"},
+      {:protobuf, "~> 0.7"}
     ]
   end
 
