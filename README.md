@@ -1,7 +1,4 @@
 # PhoenixExample
-[![Github CI](https://github.com/getong/phoenix_example/workflows/elixir_ci/badge.svg)](https://github.com/getong/phoenix_example/workflows/elixir_ci/badge.svg)
-[![CircleCI](https://circleci.com/gh/getong/phoenix_example.svg?style=svg)](https://circleci.com/gh/getong/phoenix_example)
-[![Build Status](https://travis-ci.org/getong/phoenix_example.svg?branch=master)](https://travis-ci.org/getong/phoenix_example)
 
 To start your Phoenix server:
 
@@ -16,10 +13,10 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 ## Learn more
 
-  * Official website: http://www.phoenixframework.org/
+  * Official website: https://www.phoenixframework.org/
   * Guides: https://hexdocs.pm/phoenix/overview.html
   * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
+  * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
 
 ## Usage

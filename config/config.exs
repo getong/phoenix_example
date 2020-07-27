@@ -5,7 +5,7 @@
 # is restricted to this project.
 
 # General application configuration
-import Mix.Config
+use Mix.Config
 
 config :phoenix_example,
   ecto_repos: [PhoenixExample.PostgresRepo, PhoenixExample.MysqlRepo],
@@ -16,8 +16,9 @@ config :phoenix_example,
 config :phoenix_example, PhoenixExampleWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "f4M8HRiXYLj9MUHe4w/WZ8E5H7WZG+kkLS9IR0+c5r5cF09CC2SwV7WYqm2rm7Cd",
-  render_errors: [view: PhoenixExampleWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: PhoenixExample.PubSub, adapter: Phoenix.PubSub.PG2],
+  render_errors: [view: PhoenixExampleWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: PhoenixExample.PubSub,
+  live_view: [signing_salt: "EFsj0Ivy"],
   ## copy from https://hexdocs.pm/phoenix/endpoint.html
   https: [
     port: 4001,

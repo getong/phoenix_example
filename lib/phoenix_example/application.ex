@@ -25,8 +25,14 @@ defmodule PhoenixExample.Application do
       PhoenixExample.PostgresRepo,
       {PhoenixExample.MysqlRepo, []},
       PhoenixExample.RedixRepo,
-      # Start the endpoint when the application starts
+      # Start the Telemetry supervisor
+      PhoenixExampleWeb.Telemetry,
+      # Start the PubSub system
+      {Phoenix.PubSub, name: PhoenixExample.PubSub},
+      # Start the Endpoint (http/https)
       PhoenixExampleWeb.Endpoint,
+      # Start a worker by calling: PhoenixExample.Worker.start_link(arg)
+      # {PhoenixExample.Worker, arg}
       # Starts a worker by calling: PhoenixExample.Worker.start_link(arg)
       # {PhoenixExample.Worker, arg},
       Spec.worker(Mongo, [mongodb_connection_info]),

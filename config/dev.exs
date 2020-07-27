@@ -1,4 +1,4 @@
-import Mix.Config
+use Mix.Config
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
@@ -51,7 +51,7 @@ config :phoenix_example, PhoenixExampleWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/phoenix_example_web/{live,views}/.*(ex)$",
+      ~r"lib/phoenix_example_web/(live|views)/.*(ex)$",
       ~r"lib/phoenix_example_web/templates/.*(eex)$"
     ]
   ]
