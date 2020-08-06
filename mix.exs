@@ -72,7 +72,8 @@ defmodule PhoenixExample.MixProject do
       {:cowlib, "~> 2.9", override: true},
       {:gun, "~> 1.3", override: true},
       {:emqtt, "~> 1.2"},
-      {:oban, "~> 2.0"}
+      {:oban, "~> 2.0"},
+      {:bolt_sips, "~> 2.0"}
     ]
   end
 
