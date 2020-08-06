@@ -16,3 +16,5 @@
 - [x] cron task
 - [ ] dockerfile
 - [x] Mongodb
+- [ ] spark
+- [ ] neo4j
