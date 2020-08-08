@@ -73,7 +73,8 @@ defmodule PhoenixExample.MixProject do
       {:gun, "~> 1.3", override: true},
       {:emqtt, "~> 1.2"},
       {:oban, "~> 2.0"},
-      {:bolt_sips, "~> 2.0"}
+      {:bolt_sips, "~> 2.0"},
+      {:flow, "~> 1.0"}
     ]
   end
 
