@@ -42,7 +42,7 @@ defmodule PhoenixExample.MixProject do
       {:ecto_sql, "~> 3.4"},
       {:phoenix_live_dashboard, "~> 0.2"},
       {:telemetry_metrics, "~> 0.4"},
-      {:telemetry_poller, "~> 0.4"},
+      {:telemetry_poller, "~> 0.5.1"},
       {:myxql, "~> 0.4"},
       {:geo, "~> 3.3"},
       {:postgrex, "~> 0.15"},
@@ -74,7 +74,8 @@ defmodule PhoenixExample.MixProject do
       {:emqtt, "~> 1.2"},
       {:oban, "~> 2.0"},
       {:bolt_sips, "~> 2.0"},
-      {:flow, "~> 1.0"}
+      {:flow, "~> 1.0"},
+      {:broadway, "~> 0.6.1"}
     ]
   end
 
