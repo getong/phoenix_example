@@ -21,7 +21,7 @@ jobs:
       with:
         host port: 3306
         container port: 3306
-        mariadb version: 10.5.4
+        mariadb version: 10.5.5
         mysql database: test_db
         mysql root password: zan3Kie1
     - uses: getong/redis-action@v1
@@ -47,7 +47,7 @@ jobs:
 
     - uses: getong/elasticsearch-action@v1.2
       with:
-        elasticsearch version: '7.8.1'
+        elasticsearch version: '7.9.0'
         host port: 9200
         container port: 9200
         host node port: 9300
