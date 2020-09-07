@@ -26,13 +26,13 @@ jobs:
         mysql root password: zan3Kie1
     - uses: getong/redis-action@v1
       with:
-        redis version: '6.0.5'
+        redis version: '6.0.7'
         host port: 6379
         container port: 6379
         redis password: 'TaeT9ahc'
     - uses: getong/rabbitmq-action@v1.2
       with:
-        rabbitmq version: '3.8.5-management-alpine'
+        rabbitmq version: '3.8.8-management-alpine'
         host port: 5672
         rabbitmq user: 'user'
         rabbitmq password: 'Anaith7x'
@@ -47,7 +47,7 @@ jobs:
 
     - uses: getong/elasticsearch-action@v1.2
       with:
-        elasticsearch version: '7.9.0'
+        elasticsearch version: '7.9.1'
         host port: 9200
         container port: 9200
         host node port: 9300
@@ -56,7 +56,7 @@ jobs:
 
     - uses: getong/mongo-action@v1.1
       with:
-        mongo version: '4.2.8-bionic'
+        mongo version: '4.2.9-bionic'
         host port: 27017
         mongo username: 'mongoadmin'
         mongo password: 'Iushahb0'

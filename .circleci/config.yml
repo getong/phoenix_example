@@ -7,7 +7,7 @@ jobs:
     docker:
       # specify the version here
       - image: circleci/elixir:1.10.4
-      - image: circleci/postgres:12.3
+      - image: circleci/postgres:12.4
         environment:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
@@ -17,16 +17,16 @@ jobs:
           MYSQL_DATABASE: "test_db"
           MYSQL_USER: "root"
           MYSQL_ROOT_PASSWORD: "zan3Kie1"
-      - image: rabbitmq:3.8.5-management-alpine
+      - image: rabbitmq:3.8.8-management-alpine
         environment:
           RABBITMQ_DEFAULT_USER: "user"
           RABBITMQ_DEFAULT_PASS: "Anaith7x"
           RABBITMQ_ERLANG_COOKIE: "Chiew0irtoh9Peeg"
           RABBITMQ_DEFAULT_VHOST: "vhost_name"
-      - image: elasticsearch:7.9.0
+      - image: elasticsearch:7.9.1
         environment:
          discovery.type: single-node
-      - image: mongo:4.2-bionic
+      - image: mongo:4.2.9-bionic
         environment:
           MONGO_INITDB_ROOT_USERNAME: "mongoadmin"
           MONGO_INITDB_ROOT_PASSWORD: "Iushahb0"
@@ -41,7 +41,7 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       # - run: docker run -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=Anaith7x -e RABBITMQ_DEFAULT_VHOST="/" -e RABBITMQ_ERLANG_COOKIE='Chiew0irtoh9Peeg' -d rabbitmq:3.8.2-management-alpine
-      - run: docker run -p 6379:6379 -d redis:6.0.5 redis-server --requirepass TaeT9ahc --port 6379
+      - run: docker run -p 6379:6379 -d redis:6.0.7 redis-server --requirepass TaeT9ahc --port 6379
       ## see https://discuss.circleci.com/t/cannot-connect-to-rabbitmq/19830 , the rabbitmq need some times to start
       - run: sleep 10
       - run: mix local.rebar --force
