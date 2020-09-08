@@ -35,13 +35,13 @@ defmodule PhoenixExample.MixProject do
   defp deps do
     [
       {:phoenix, "~> 1.5"},
-      {:phoenix_ecto, "~> 4.1"},
+      {:phoenix_ecto, "~> 4.2"},
       {:phoenix_html, "~> 2.14"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.14"},
       {:phoenix_live_dashboard, "~> 0.2"},
       {:ecto_sql, "~> 3.4"},
-      {:telemetry_metrics, "~> 0.4"},
+      {:telemetry_metrics, "~> 0.5"},
       {:telemetry_poller, "~> 0.5.1"},
       {:myxql, "~> 0.4"},
       {:geo, "~> 3.3"},
@@ -75,7 +75,7 @@ defmodule PhoenixExample.MixProject do
       {:oban, "~> 2.1.0"},
       {:bolt_sips, "~> 2.0"},
       {:flow, "~> 1.0"},
-      {:broadway, "~> 0.6.1"}
+      {:broadway, "~> 0.6.2"}
     ]
   end
 
