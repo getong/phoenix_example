@@ -56,7 +56,7 @@ defmodule PhoenixExample.MixProject do
       {:distillery, "~> 2.1", runtime: false},
       {:elasticsearch, "~> 1.0"},
       {:libcluster, "~> 3.2"},
-      {:redix, "~> 0.11"},
+      {:redix, "~> 1.0"},
       {:snappyer, "~> 1.2"},
       ## {:kafka_ex, "~> 0.10.0"},
       {:gen_amqp, "~> 7.0"},
