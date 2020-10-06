@@ -76,7 +76,8 @@ defmodule PhoenixExample.MixProject do
       {:bolt_sips, "~> 2.0"},
       {:flow, "~> 1.0"},
       {:broadway, "~> 0.6.2"},
-      {:pelemay, "~> 0.0.13"}
+      {:pelemay, "~> 0.0.13"},
+      {:peerage, "~> 1.0"}
     ]
   end
 
