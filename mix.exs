@@ -77,7 +77,8 @@ defmodule PhoenixExample.MixProject do
       {:flow, "~> 1.0"},
       {:broadway, "~> 0.6.2"},
       {:pelemay, "~> 0.0.13"},
-      {:peerage, "~> 1.0"}
+      {:peerage, "~> 1.0"},
+      {:contex, "~> 0.3.0"}
     ]
   end
 
