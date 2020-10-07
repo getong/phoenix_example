@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/getong/phoenix_example.svg?branch=master)](https://travis-ci.com/getong/phoenix_example)
 [![CircleCI](https://circleci.com/gh/getong/phoenix_example.svg?style=svg)](https://circleci.com/gh/getong/phoenix_example)
-[![Actions Status](https://github.com/getong/phoenix_example/workflows/elixir_ci/badge.svg)](https://github.com/getong/phoenix_example/actions)
+[![Actions Status](https://github.com/getong/phoenix_example/workflows/elixir/badge.svg)](https://github.com/getong/phoenix_example/actions)
 
 
 To start your Phoenix server:
