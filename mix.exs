@@ -39,7 +39,7 @@ defmodule PhoenixExample.MixProject do
       {:phoenix_html, "~> 2.14"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.14.7"},
-      {:phoenix_live_dashboard, "~> 0.2.10"},
+      {:phoenix_live_dashboard, "~> 0.3.1"},
       {:ecto_sql, "~> 3.5"},
       {:telemetry_metrics, "~> 0.6"},
       {:telemetry_poller, "~> 0.5.1"},
