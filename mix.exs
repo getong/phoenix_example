@@ -79,7 +79,9 @@ defmodule PhoenixExample.MixProject do
       {:pelemay, "~> 0.0.13"},
       {:peerage, "~> 1.0"},
       {:contex, "~> 0.3.0"},
-      {:rustler, "~> 0.21.1"}
+      {:rustler, "~> 0.21.1"},
+      {:saxy, "~> 1.3"},
+      {:msgpax, "~> 2.2"}
     ]
   end
 
