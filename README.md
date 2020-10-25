@@ -27,9 +27,9 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 ## Usage
 
 ``` shell
-mix drop
-mix create
-mix migrate
+mix ecto.drop
+mix ecto.create
+mix ecto.migrate
 iex -S mix phx.server
 1> PhoenixExample.ATableContext.create_a_table(%{name: "abc", password: "c"})
 2> PhoenixExample.ATableContext.list_a_table()
