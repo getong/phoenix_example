@@ -83,11 +83,11 @@ config :phoenix_example, :mongodb_info,
   name: :mongo,
   pool_size: 2
 
-config :gen_amqp,
-  connections: [
-    {:static, StaticConnSup, [ConnHub: "amqp://user:Anaith7x@localhost:5672/vhost_name"]}
-  ],
-  error_handler: ErrorHandler
+##config :gen_amqp,
+##  connections: [
+##    {:static, StaticConnSup, [ConnHub: "amqp://user:Anaith7x@localhost:5672/vhost_name"]}
+##  ],
+##  error_handler: ErrorHandler
 
 config :phoenix_example, PhoenixExample.CronScheduler,
   jobs: [
