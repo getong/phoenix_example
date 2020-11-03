@@ -4,7 +4,7 @@ defmodule PhoenixExample.Application do
   @moduledoc false
 
   use Application
-  alias Supervisor.Spec
+  # alias Supervisor.Spec
 
   def start(_type, _args) do
     # List all child processes to be supervised
@@ -35,7 +35,7 @@ defmodule PhoenixExample.Application do
       # {PhoenixExample.Worker, arg}
       # Starts a worker by calling: PhoenixExample.Worker.start_link(arg)
       # {PhoenixExample.Worker, arg},
-      Spec.worker(Mongo, [mongodb_connection_info]),
+      {Mongo, mongodb_connection_info},
       PhoenixExample.CronScheduler
     ]
 
