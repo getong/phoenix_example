@@ -1,6 +1,6 @@
 defmodule PhoenixExample.ServerDemo do
 ##  ## copy from https://hexdocs.pm/gen_amqp/GenAMQP.html#content
-##  @moduledoc false
+  @moduledoc false
 ##
 ##  use GenAMQP.Server,
 ##    event: "server_demo",
