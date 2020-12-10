@@ -74,7 +74,7 @@ defmodule PhoenixExample.MixProject do
       {:emqtt, "~> 1.2"},
       {:oban, "~> 2.3"},
       {:bolt_sips, "~> 2.0"},
-      {:flow, "~> 1.0"},
+      {:flow, "~> 1.1"},
       {:broadway, "~> 0.6.2"},
       {:pelemay, "~> 0.0.13"},
       {:peerage, "~> 1.0"},
