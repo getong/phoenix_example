@@ -68,7 +68,7 @@ jobs:
         ## see https://github.community/t5/GitHub-Actions/ubuntu-latest-Apt-repository-list-issues/td-p/41122 for more info
         sudo apt-get update || echo "ok"
         sudo apt-get install -y erlang wget unzip nodejs
-        wget -c https://github.com/elixir-lang/elixir/releases/download/v1.11.2/Precompiled.zip
+        wget -c https://github.com/elixir-lang/elixir/releases/download/v1.11.3/Precompiled.zip
         mkdir elixir
         unzip Precompiled.zip -d elixir
         export PATH=./elixir/bin/:$PATH
