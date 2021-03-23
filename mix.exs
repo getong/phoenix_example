@@ -81,6 +81,7 @@ defmodule PhoenixExample.MixProject do
       {:contex, "~> 0.3.0"},
       {:rustler, "~> 0.22.0-rc.0"},
       {:saxy, "~> 1.3"},
+      {:finch, "~> 0.6.3"},
       {:msgpax, "~> 2.2"}
     ]
   end
